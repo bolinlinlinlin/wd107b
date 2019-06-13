@@ -41,7 +41,7 @@
     <input type="button" value="result" onClick="result()"><br>
 	BMI值為:<input type="text" name="height" id="bmi" value=""><br>
     <input type="button" value="check" onClick="check()"><br>
-    <a href="https://zh.wikipedia.org/wiki/%E8%BA%AB%E9%AB%98%E9%AB%94%E9%87%8D%E6%8C%87%E6%95%B8" style="color:yellow;" title="nice">關於BMI</a>
+    <a href="https://zh.wikipedia.org/wiki/%E8%BA%AB%E9%AB%98%E9%AB%94%E9%87%8D%E6%8C%87%E6%95%B8" style="color:yellow;" title="BMI">關於BMI</a>
 	</center>
 	<script>
 function result(){
