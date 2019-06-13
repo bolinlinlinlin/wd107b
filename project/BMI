@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>計算BMI的小小網站</title>
+<style type="text/css">
+        a:link{
+               text-decoration:none;
+               background-color:#B800B8;
+              }
+        a:visited {
+               color:#ffffff;
+               background-color:gray;
+              }
+        a:hover {
+               text-decoration:none;
+               background-color:none;
+               color:gray;
+              }
+        a:active {
+               text-decoration:none;
+               background-color:purple;
+               color:white;
+              }
+        .g {color:green;}
+     
+	body
+        {
+        margin:0px;
+        padding:0px;
+        background:#fff url('http://www.pptok.com/wp-content/uploads/2012/08/danya4.jpg') center center fixed no-repeat;
+        background-size: cover;
+        }
+</style>
+</head>
+<body>
+<h1 style="color:blue;font-family:標楷體;"><center>計算BMI</center></h1>
+    <center>
+    身高(m): <input type="text"  id="m" value=""><br>
+    體重(kg): <input type="text"  id="kg" value=""><br>	
+    <input type="button" value="result" onClick="result()"><br>
+	BMI值為:<input type="text" name="height" id="bmi" value=""><br>
+    <input type="button" value="check" onClick="check()"><br>
+    <a href="https://zh.wikipedia.org/wiki/%E8%BA%AB%E9%AB%98%E9%AB%94%E9%87%8D%E6%8C%87%E6%95%B8" style="color:yellow;" title="nice">關於BMI</a>
+	</center>
+	<script>
+function result(){
+x = document.getElementById("m").value;
+y = document.getElementById("kg").value;
+z = y/(x*x);
+document.getElementById("bmi").value = parseFloat(z.toFixed(2));
+}
+
+function check(){
+if(document.getElementById("bmi").value<18.5)
+{
+    alert("體重過輕");
+}
+
+else if(document.getElementById("bmi").value<24&&document.getElementById("bmi").value>=18.5)
+{
+    alert("正常");
+}
+
+else if(document.getElementById("bmi").value<=24&&document.getElementById("bmi").value<27)
+{
+    alert("過重");
+}
+
+else if(document.getElementById("bmi").value<=27&&document.getElementById("bmi").value<30)
+{
+    alert("輕度肥胖");
+}
+
+else if(document.getElementById("bmi").value<=30&&document.getElementById("bmi").value<35)
+{
+    alert("中度肥胖");
+}
+
+else if(document.getElementById("bmi").value>35)
+{
+    alert("重度肥胖");
+}
+}
+
+		
+   </script>
+</body>
+</html>
